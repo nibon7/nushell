@@ -1,6 +1,6 @@
 use core::fmt::Write;
 use fancy_regex::Regex;
-use once_cell::sync::Lazy;
+use std::sync::LazyLock;
 
 use nu_engine::get_columns;
 use nu_parser::escape_quote_string;
@@ -262,7 +262,7 @@ fn value_to_string_without_quotes(
 // • Any digit (\d)
 // • Any whitespace (\s)
 // • Case-insensitive sign-insensitive float "keywords" inf, infinity and nan.
-static NEEDS_QUOTES_REGEX: Lazy<Regex> = Lazy::new(|| {
+static NEEDS_QUOTES_REGEX: LazyLock<Regex> = LazyLock::new(|| {
     Regex::new(r#"[\[\]:`\{\}#'";\(\)\|\$,\d\s]|(?i)^[+\-]?(inf(inity)?|nan)$"#)
         .expect("internal error: NEEDS_QUOTES_REGEX didn't compile")
 });

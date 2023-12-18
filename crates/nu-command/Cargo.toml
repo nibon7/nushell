@@ -64,7 +64,6 @@ native-tls = { workspace = true }
 notify-debouncer-full = { workspace = true, default-features = false }
 num-format = { workspace = true }
 num-traits = { workspace = true }
-once_cell = { workspace = true }
 open = { workspace = true }
 os_pipe = { workspace = true }
 pathdiff = { workspace = true }
