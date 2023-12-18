@@ -2966,7 +2966,6 @@ dependencies = [
  "nu-protocol",
  "nu-test-support",
  "nu-utils",
- "once_cell",
  "percent-encoding",
  "reedline",
  "rstest",
@@ -3109,7 +3108,6 @@ dependencies = [
  "num-format",
  "num-traits",
  "nuon",
- "once_cell",
  "open",
  "os_pipe",
  "pathdiff",
@@ -3201,7 +3199,6 @@ dependencies = [
  "nu-protocol",
  "nu-table",
  "nu-utils",
- "once_cell",
  "ratatui",
  "strip-ansi-escapes",
  "terminal_size",
@@ -3419,7 +3416,6 @@ dependencies = [
  "mach2",
  "nix",
  "ntapi",
- "once_cell",
  "procfs",
  "sysinfo",
  "windows 0.54.0",
@@ -3435,7 +3431,6 @@ dependencies = [
  "nu-engine",
  "nu-protocol",
  "nu-utils",
- "once_cell",
  "tabled",
 ]
 
@@ -3712,7 +3707,6 @@ dependencies = [
  "nu-engine",
  "nu-parser",
  "nu-protocol",
- "once_cell",
 ]
 
 [[package]]
