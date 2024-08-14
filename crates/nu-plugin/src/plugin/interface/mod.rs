@@ -1090,10 +1090,9 @@ fn set_pgrp_from_enter_foreground(pgrp: i64) -> Result<(), ShellError> {
 #[cfg(not(unix))]
 fn set_pgrp_from_enter_foreground(_pgrp: i64) -> Result<(), ShellError> {
     Err(ShellError::NushellFailed {
-        msg: concat!(
-            "EnterForeground asked plugin to join process group, but not supported on ",
-            cfg!(target_os)
-        )
-        .into(),
+        msg: format!(
+            "EnterForeground asked plugin to join process group, but not supported on {}",
+            std::env::consts::OS
+        ),
     })
 }
